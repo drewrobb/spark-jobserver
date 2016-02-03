@@ -47,7 +47,7 @@ LOGGING_OPTS="-Dlog4j.configuration=file:$appdir/log4j-server.properties
               -DLOG_DIR=$LOG_DIR"
 
 # For Mesos
-CONFIG_OVERRIDES="-Dspark.executor.uri=$SPARK_EXECUTOR_URI "
+CONFIG_OVERRIDES=""
 # For Mesos/Marathon, use the passed-in port
 if [ "$PORT" != "" ]; then
   CONFIG_OVERRIDES+="-Dspark.jobserver.port=$PORT "
